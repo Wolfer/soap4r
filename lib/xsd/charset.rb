@@ -10,7 +10,7 @@ module XSD
 
 
 module Charset
-  @internal_encoding = $KCODE
+  @internal_encoding = Encoding.find("internal").to_s
 
   class XSDError < StandardError; end
   class CharsetError < XSDError; end
