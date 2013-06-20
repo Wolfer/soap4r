@@ -38,7 +38,7 @@ class SimpleRestriction < Info
     @length = nil
     @maxlength = nil
     @minlength = nil
-    @pattern = nil
+    @pattern = []
     @fixed = {}
     @attributes = XSD::NamedElements.new
   end

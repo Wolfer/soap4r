@@ -25,7 +25,7 @@ class Pattern < Info
   def parse_attr(attr, value)
     case attr
     when ValueAttrName
-      parent.pattern = /\A#{value.source}\z/n
+      parent.pattern << Regexp.new(value.source)
       value.source
     end
   end
