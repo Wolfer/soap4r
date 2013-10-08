@@ -14,6 +14,7 @@ module XMLSchema
 
 
 class Any < Info
+  attr_accessor :name
   attr_accessor :maxoccurs
   attr_accessor :minoccurs
   attr_accessor :namespace
@@ -21,6 +22,7 @@ class Any < Info
 
   def initialize
     super()
+    @name = AnyName
     @maxoccurs = 1
     @minoccurs = 1
     @namespace = '##any'
